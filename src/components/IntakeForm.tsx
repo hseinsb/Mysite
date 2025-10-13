@@ -7,33 +7,13 @@ import { Send, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 interface FormData {
   name: string;
   email: string;
-  businessType: string;
-  budget: string;
   needs: string;
 }
-
-const budgetOptions = [
-  { value: "under-1k", label: "Under $1,000" },
-  { value: "1k-2.5k", label: "$1,000 - $2,500" },
-  { value: "2.5k-5k", label: "$2,500 - $5,000" },
-  { value: "5k-10k", label: "$5,000 - $10,000" },
-  { value: "10k-plus", label: "$10,000+" },
-];
-
-const businessTypes = [
-  { value: "creator", label: "Creator/Influencer" },
-  { value: "ecommerce", label: "E-commerce" },
-  { value: "saas", label: "SaaS/Tech" },
-  { value: "local", label: "Local Business" },
-  { value: "agency", label: "Agency/Consultant" },
-  { value: "other", label: "Other" },
-];
 
 export function IntakeForm() {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -53,14 +33,22 @@ export function IntakeForm() {
     setIsSubmitting(true);
     
     try {
-      // Here you would typically send to your webhook/API
-      // For now, we'll simulate a successful submission
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      console.log("Form submitted:", data);
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to send email');
+      }
+
       setIsSubmitted(true);
     } catch (error) {
       console.error("Form submission error:", error);
+      alert('There was an error submitting the form. Please try again or email hussein.sbeiti.wb@gmail.com directly.');
     } finally {
       setIsSubmitting(false);
     }
@@ -68,26 +56,22 @@ export function IntakeForm() {
 
   if (isSubmitted) {
     return (
-      <motion.div
-        initial={{ opacity: 0, scale: 0.95 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.5 }}
-        className="text-center py-12"
-      >
-        <CheckCircle className="w-16 h-16 text-accent mx-auto mb-6" />
-        <h3 className="text-2xl font-bold mb-4">Thanks for reaching out!</h3>
-        <p className="text-muted mb-6 max-w-md mx-auto">
-          I'll review your submission and get back to you within 24 hours with next steps.
-        </p>
-        <Button
-          asChild
-          className="bg-accent hover:bg-accent-2 text-black font-semibold"
-        >
-          <a href="/consulting" target="_blank" rel="noopener noreferrer">
-            Book a Strategy Call While You Wait
-          </a>
-        </Button>
-      </motion.div>
+      <section id="contact" className="py-24 bg-gradient-to-b from-black to-gray-900">
+        <div className="max-w-4xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+            className="text-center py-12"
+          >
+            <CheckCircle className="w-16 h-16 text-accent mx-auto mb-6" />
+            <h3 className="text-2xl font-bold mb-4 text-white">Thanks for reaching out!</h3>
+            <p className="text-gray-300 mb-6 max-w-md mx-auto">
+              I'll review your submission and get back to you within 24 hours with next steps.
+            </p>
+          </motion.div>
+        </div>
+      </section>
     );
   }
 
@@ -168,50 +152,6 @@ export function IntakeForm() {
                   />
                   {errors.email && (
                     <p className="text-red-400 text-sm mt-1">{errors.email.message}</p>
-                  )}
-                </div>
-
-                {/* Business Type */}
-                <div>
-                  <label htmlFor="businessType" className="block text-sm font-medium mb-2 text-white">
-                    Business Type *
-                  </label>
-                  <Select onValueChange={(value) => setValue("businessType", value)}>
-                    <SelectTrigger className="bg-gray-800/50 border-gray-600 focus:border-blue-500 text-white">
-                      <SelectValue placeholder="Select your business type" className="text-gray-400" />
-                    </SelectTrigger>
-                    <SelectContent className="bg-gray-800 border-gray-600">
-                      {businessTypes.map((type) => (
-                        <SelectItem key={type.value} value={type.value} className="text-white hover:bg-gray-700">
-                          {type.label}
-                        </SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
-                  {errors.businessType && (
-                    <p className="text-red-400 text-sm mt-1">Please select a business type</p>
-                  )}
-                </div>
-
-                {/* Budget */}
-                <div>
-                  <label htmlFor="budget" className="block text-sm font-medium mb-2 text-white">
-                    Budget Range *
-                  </label>
-                  <Select onValueChange={(value) => setValue("budget", value)}>
-                    <SelectTrigger className="bg-gray-800/50 border-gray-600 focus:border-blue-500 text-white">
-                      <SelectValue placeholder="Select your budget range" className="text-gray-400" />
-                    </SelectTrigger>
-                    <SelectContent className="bg-gray-800 border-gray-600">
-                      {budgetOptions.map((option) => (
-                        <SelectItem key={option.value} value={option.value} className="text-white hover:bg-gray-700">
-                          {option.label}
-                        </SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
-                  {errors.budget && (
-                    <p className="text-red-400 text-sm mt-1">Please select a budget range</p>
                   )}
                 </div>
 
