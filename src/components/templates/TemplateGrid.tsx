@@ -199,7 +199,7 @@ const templates = [
   }
 ];
 
-const difficultyColors = {
+const difficultyColors: Record<string, string> = {
   "Beginner": "bg-green-500/20 text-green-400",
   "Intermediate": "bg-yellow-500/20 text-yellow-400", 
   "Advanced": "bg-red-500/20 text-red-400",
