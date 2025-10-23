@@ -11,10 +11,20 @@ export const metadata: Metadata = {
   title: "About Hussein Sbeiti | Systems Architect",
   description: "Lebanese immigrant turned systems architect. From labor jobs at 16 to building six-figure revenue systems. Ethics over hype, outcomes over deliverables.",
   keywords: ["Hussein Sbeiti", "systems architect", "entrepreneur", "automation", "Lebanese", "immigrant story"],
+  alternates: {
+    canonical: "https://hussbuilds.com/about",
+  },
   openGraph: {
     title: "About Hussein Sbeiti | Systems Architect",
     description: "Lebanese immigrant turned systems architect. From labor jobs at 16 to building six-figure revenue systems. Ethics over hype, outcomes over deliverables.",
-    url: "https://husseinsbeiti.com/about",
+    url: "https://hussbuilds.com/about",
+    images: ["/og-image.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Hussein Sbeiti | Systems Architect",
+    description: "Lebanese immigrant turned systems architect. From labor jobs at 16 to building six-figure revenue systems.",
+    images: ["/og-image.png"],
   },
 };
 
