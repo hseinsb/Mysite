@@ -18,6 +18,9 @@ export function ExitIntentPopup() {
       return;
     }
 
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+    // Desktop: Mouse leave detection
     const handleMouseLeave = (e: MouseEvent) => {
       // Only trigger if mouse leaves from the top of the page (navigation away)
       if (e.clientY <= 0 && !hasShown) {
@@ -27,14 +30,58 @@ export function ExitIntentPopup() {
       }
     };
 
-    // Add a small delay before activating exit intent (prevent immediate triggers)
-    const timer = setTimeout(() => {
-      document.addEventListener("mouseout", handleMouseLeave);
-    }, 3000);
+    // Mobile: Time-based + scroll-based triggers
+    let scrollTimer: NodeJS.Timeout;
+    let hasScrolled = false;
+    
+    const handleScroll = () => {
+      hasScrolled = true;
+      
+      // Clear existing timer
+      clearTimeout(scrollTimer);
+      
+      // Show popup after user has been scrolling and then stops for 5 seconds
+      // This indicates they're reading/considering but might leave
+      scrollTimer = setTimeout(() => {
+        if (!hasShown && hasScrolled) {
+          setShowPopup(true);
+          setHasShown(true);
+          sessionStorage.setItem("exitIntentShown", "true");
+        }
+      }, 5000);
+    };
+
+    // Mobile: Show after 30 seconds of engagement
+    const engagementTimer = isMobile ? setTimeout(() => {
+      if (!hasShown) {
+        setShowPopup(true);
+        setHasShown(true);
+        sessionStorage.setItem("exitIntentShown", "true");
+      }
+    }, 30000) : null; // 30 seconds
+
+    // Add appropriate listeners based on device
+    if (isMobile) {
+      // Mobile: Use scroll-based detection
+      window.addEventListener("scroll", handleScroll);
+    } else {
+      // Desktop: Use mouse leave detection after 3 second delay
+      const timer = setTimeout(() => {
+        document.addEventListener("mouseout", handleMouseLeave);
+      }, 3000);
+      
+      return () => {
+        clearTimeout(timer);
+        document.removeEventListener("mouseout", handleMouseLeave);
+      };
+    }
 
     return () => {
-      clearTimeout(timer);
-      document.removeEventListener("mouseout", handleMouseLeave);
+      if (isMobile) {
+        window.removeEventListener("scroll", handleScroll);
+        clearTimeout(scrollTimer);
+        if (engagementTimer) clearTimeout(engagementTimer);
+      }
     };
   }, [hasShown]);
 
