@@ -46,7 +46,7 @@ export function Navigation() {
     <motion.header
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-black/80 backdrop-blur-md border-b border-white/5"
+          ? "bg-black/85 backdrop-blur-md border-b border-white/5 shadow-lg shadow-black/20"
           : "bg-transparent"
       }`}
       initial={{ y: -100 }}
@@ -56,7 +56,7 @@ export function Navigation() {
       <nav className="mx-auto max-w-6xl px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center">
+          <Link href="/" className="flex items-center" aria-label="Hussein Sbeiti - Systems Architect">
             <motion.div
               className="text-xl font-bold text-white"
               whileHover={{ scale: 1.05 }}
@@ -78,10 +78,10 @@ export function Navigation() {
                 <Link
                   href={item.href}
                   onClick={(e) => handleNavClick(e, item.href)}
-                  className="text-sm font-medium text-muted hover:text-white transition-colors duration-200 relative group"
+                  className="text-sm font-medium text-muted hover:text-white transition-all duration-200 relative group"
                 >
                   {item.name}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full" />
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-250 ease-out group-hover:w-full" />
                 </Link>
               </motion.div>
             ))}
@@ -95,9 +95,9 @@ export function Navigation() {
             >
               <Button
                 asChild
-                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold shadow-lg shadow-blue-500/25"
+                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold shadow-lg shadow-blue-500/25 transition-all duration-250"
               >
-                <Link href="#contact">Book Free Call</Link>
+                <Link href="/contact">Book Strategy Call</Link>
               </Button>
             </motion.div>
           </div>
@@ -164,10 +164,10 @@ export function Navigation() {
                 >
                   <Button
                     asChild
-                    className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold shadow-lg shadow-blue-500/25"
+                    className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold shadow-lg shadow-blue-500/25 transition-all duration-250"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    <Link href="#contact">Book Free Call</Link>
+                    <Link href="/contact">Book Strategy Call</Link>
                   </Button>
                 </motion.div>
               </div>
