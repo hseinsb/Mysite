@@ -51,7 +51,7 @@ const currentWork = [
 
 export function AboutStory() {
   return (
-    <section className="py-24 bg-gradient-to-b from-black/20 to-transparent">
+    <section className="pt-24 pb-12 bg-gradient-to-b from-black/20 to-transparent">
       <div className="max-w-7xl mx-auto px-6">
         {/* The Short Story */}
         <motion.div
