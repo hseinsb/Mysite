@@ -104,20 +104,20 @@ export function ExitIntentPopup() {
 
           {/* Popup */}
           <motion.div
-            className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 w-full max-w-lg mx-4"
+            className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 w-full max-w-lg mx-4 max-h-[90vh] overflow-y-auto"
             initial={{ opacity: 0, scale: 0.9, y: -20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.9, y: -20 }}
             transition={{ type: "spring", damping: 25, stiffness: 300 }}
           >
-            <div className="bg-gradient-to-br from-gray-900 to-black border border-blue-500/30 rounded-2xl shadow-2xl shadow-blue-500/20 p-8 relative overflow-hidden">
+            <div className="bg-gradient-to-br from-gray-900 to-black border border-blue-500/30 rounded-2xl shadow-2xl shadow-blue-500/20 p-5 sm:p-8 relative overflow-hidden">
               {/* Close Button */}
               <button
                 onClick={closePopup}
-                className="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors z-10"
+                className="absolute top-3 right-3 sm:top-4 sm:right-4 text-gray-400 hover:text-white transition-colors z-10"
                 aria-label="Close popup"
               >
-                <X className="w-6 h-6" />
+                <X className="w-5 h-5 sm:w-6 sm:h-6" />
               </button>
 
               {/* Background Glow */}
@@ -128,28 +128,28 @@ export function ExitIntentPopup() {
               <div className="relative z-10">
                 {/* Icon */}
                 <motion.div
-                  className="mb-6"
+                  className="mb-4 sm:mb-6"
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
                   transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
                 >
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto">
-                    <Zap className="w-8 h-8 text-white" />
+                  <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto">
+                    <Zap className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                   </div>
                 </motion.div>
 
                 {/* Heading */}
-                <h3 className="text-2xl md:text-3xl font-bold text-white text-center mb-4">
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white text-center mb-3 sm:mb-4">
                   Wait! Before You Go...
                 </h3>
 
                 {/* Message */}
-                <p className="text-gray-300 text-center mb-6 leading-relaxed">
+                <p className="text-sm sm:text-base text-gray-300 text-center mb-5 sm:mb-6 leading-relaxed">
                   Get a <span className="text-accent font-semibold">free strategy call</span> and discover how to automate your business and 3x your revenue with AI systems.
                 </p>
 
                 {/* Benefits */}
-                <div className="space-y-3 mb-8">
+                <div className="space-y-2 sm:space-y-3 mb-6 sm:mb-8">
                   {[
                     "Free 30-minute strategy session",
                     "Custom automation roadmap",
@@ -157,13 +157,13 @@ export function ExitIntentPopup() {
                   ].map((benefit, index) => (
                     <motion.div
                       key={benefit}
-                      className="flex items-center gap-3 text-sm text-gray-300"
+                      className="flex items-center gap-2 sm:gap-3 text-xs sm:text-sm text-gray-300"
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: 0.3 + index * 0.1 }}
                     >
-                      <div className="w-5 h-5 rounded-full bg-green-500/20 flex items-center justify-center flex-shrink-0">
-                        <div className="w-2 h-2 rounded-full bg-green-500" />
+                      <div className="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-green-500/20 flex items-center justify-center flex-shrink-0">
+                        <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-green-500" />
                       </div>
                       <span>{benefit}</span>
                     </motion.div>
@@ -171,10 +171,10 @@ export function ExitIntentPopup() {
                 </div>
 
                 {/* CTA Buttons */}
-                <div className="flex flex-col sm:flex-row gap-3">
+                <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
                   <Button
                     asChild
-                    className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold shadow-lg shadow-blue-500/25 h-12"
+                    className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold shadow-lg shadow-blue-500/25 h-10 sm:h-12 text-sm sm:text-base"
                   >
                     <Link 
                       href="/contact" 
@@ -182,20 +182,20 @@ export function ExitIntentPopup() {
                       onClick={closePopup}
                     >
                       <span>Book Free Strategy Call</span>
-                      <ArrowRight className="w-4 h-4" />
+                      <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                     </Link>
                   </Button>
                   
                   <button
                     onClick={closePopup}
-                    className="flex-1 sm:flex-none px-6 h-12 text-gray-400 hover:text-white transition-colors text-sm"
+                    className="flex-1 sm:flex-none px-6 h-10 sm:h-12 text-gray-400 hover:text-white transition-colors text-xs sm:text-sm"
                   >
                     No thanks
                   </button>
                 </div>
 
                 {/* Trust Badge */}
-                <p className="text-xs text-gray-500 text-center mt-4">
+                <p className="text-[10px] sm:text-xs text-gray-500 text-center mt-3 sm:mt-4">
                   ⚡ 200k+ followers trust my systems • Based in Michigan, USA
                 </p>
               </div>
