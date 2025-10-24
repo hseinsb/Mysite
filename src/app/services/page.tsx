@@ -53,70 +53,108 @@ export default function ServicesPage() {
           </div>
         </section>
 
-        {/* Pricing Details Section */}
+        {/* Services Section */}
         <section className="pt-16 pb-8 bg-black">
           <div className="max-w-6xl mx-auto px-6">
-            <h2 className="text-3xl font-bold mb-12 text-center text-white">
-              Website Design Packages & Prices
-            </h2>
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+                Website Design & Development Services
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Custom website design, ecommerce development, and ongoing maintenance built for growth.
+              </p>
+            </div>
             
             <div className="grid md:grid-cols-2 gap-8 mb-16">
-              {/* WordPress Pricing */}
-              <div className="bg-gray-900 p-8 rounded-lg border border-gray-800">
-                <h3 className="text-2xl font-bold mb-4 text-accent">
-                  WordPress Website Design Cost
+              {/* WordPress Services */}
+              <div className="bg-gray-900 p-8 rounded-lg border border-gray-800 hover:border-accent/30 transition-all duration-300">
+                <h3 className="text-2xl font-bold mb-3 text-white">
+                  WordPress Website Design
                 </h3>
-                <p className="text-gray-300 mb-6">
-                  Custom WordPress sites with modern design, SEO optimization, and mobile responsiveness. 
-                  Includes monthly maintenance packages for ongoing support.
+                <p className="text-accent font-semibold mb-6 text-lg">
+                  Starting at $1,500
                 </p>
-                <ul className="space-y-3 text-gray-400">
-                  <li>✓ Custom theme development</li>
-                  <li>✓ Plugin integration & optimization</li>
-                  <li>✓ SEO-ready structure</li>
-                  <li>✓ WordPress monthly maintenance package available</li>
+                <p className="text-gray-300 mb-6">
+                  Custom WordPress sites with modern design, SEO optimization, and mobile responsiveness for businesses ready to grow online.
+                </p>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3">
+                    <span className="text-accent text-xl flex-shrink-0">✓</span>
+                    <span className="text-gray-300">Custom-built themes.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-accent text-xl flex-shrink-0">✓</span>
+                    <span className="text-gray-300">Optimized plugin setup.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-accent text-xl flex-shrink-0">✓</span>
+                    <span className="text-gray-300">SEO-ready structure.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-accent text-xl flex-shrink-0">✓</span>
+                    <span className="text-gray-300">Mobile-responsive design.</span>
+                  </li>
                 </ul>
               </div>
 
-              {/* Ecommerce Pricing */}
-              <div className="bg-gray-900 p-8 rounded-lg border border-gray-800">
-                <h3 className="text-2xl font-bold mb-4 text-accent">
-                  Ecommerce Website Development Cost
+              {/* Ecommerce Services */}
+              <div className="bg-gray-900 p-8 rounded-lg border border-gray-800 hover:border-accent/30 transition-all duration-300">
+                <h3 className="text-2xl font-bold mb-3 text-white">
+                  Ecommerce Website Development
                 </h3>
-                <p className="text-gray-300 mb-6">
-                  Full-featured online stores with payment processing, inventory management, 
-                  and automated workflows. Shopify, WooCommerce, or custom solutions.
+                <p className="text-accent font-semibold mb-6 text-lg">
+                  Starting at $3,000
                 </p>
-                <ul className="space-y-3 text-gray-400">
-                  <li>✓ Payment gateway integration</li>
-                  <li>✓ Product catalog setup</li>
-                  <li>✓ Automated order processing</li>
-                  <li>✓ Analytics & reporting</li>
+                <p className="text-gray-300 mb-6">
+                  Full-featured online stores with payment processing, inventory management, and automated workflows. Shopify, WooCommerce, or custom solutions.
+                </p>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3">
+                    <span className="text-accent text-xl flex-shrink-0">✓</span>
+                    <span className="text-gray-300">Payment gateway integration.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-accent text-xl flex-shrink-0">✓</span>
+                    <span className="text-gray-300">Product catalog setup.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-accent text-xl flex-shrink-0">✓</span>
+                    <span className="text-gray-300">Automated order processing.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-accent text-xl flex-shrink-0">✓</span>
+                    <span className="text-gray-300">Analytics & reporting.</span>
+                  </li>
                 </ul>
               </div>
             </div>
 
             {/* Maintenance Packages */}
             <div className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 p-8 rounded-lg border border-blue-500/20">
-              <h3 className="text-2xl font-bold mb-4 text-white">
-                Monthly Website Maintenance Packages
+              <h3 className="text-2xl font-bold mb-3 text-white">
+                Website Maintenance Packages
               </h3>
-              <p className="text-gray-300 mb-6">
-                Keep your site secure, fast, and up-to-date with ongoing maintenance. 
-                Includes updates, backups, security monitoring, and technical support.
+              <p className="text-accent font-semibold mb-6 text-lg">
+                From $99/month
+              </p>
+              <p className="text-gray-300 mb-8">
+                Keep your site secure, fast, and up-to-date with ongoing maintenance. Includes updates, backups, security monitoring, and technical support.
               </p>
               <div className="grid md:grid-cols-3 gap-6">
-                <div>
-                  <h4 className="font-semibold text-accent mb-2">Basic</h4>
-                  <p className="text-sm text-gray-400">Updates, backups, monitoring</p>
+                <div className="bg-gray-900/50 p-6 rounded-lg border border-gray-800">
+                  <h4 className="font-bold text-white mb-3 text-lg">Basic</h4>
+                  <p className="text-accent font-semibold mb-2">$99/mo</p>
+                  <p className="text-sm text-gray-400">Updates, backups, and monitoring.</p>
                 </div>
-                <div>
-                  <h4 className="font-semibold text-accent mb-2">Professional</h4>
-                  <p className="text-sm text-gray-400">+ Performance optimization, SEO</p>
+                <div className="bg-gray-900/50 p-6 rounded-lg border border-accent/30">
+                  <h4 className="font-bold text-white mb-3 text-lg">Professional</h4>
+                  <p className="text-accent font-semibold mb-2">$199/mo</p>
+                  <p className="text-sm text-gray-400">+ Performance optimization and SEO.</p>
                 </div>
-                <div>
-                  <h4 className="font-semibold text-accent mb-2">Enterprise</h4>
-                  <p className="text-sm text-gray-400">+ Priority support, custom dev</p>
+                <div className="bg-gray-900/50 p-6 rounded-lg border border-gray-800">
+                  <h4 className="font-bold text-white mb-3 text-lg">Enterprise</h4>
+                  <p className="text-accent font-semibold mb-2">$399/mo</p>
+                  <p className="text-sm text-gray-400">+ Priority support and custom dev.</p>
                 </div>
               </div>
             </div>
