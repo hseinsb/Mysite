@@ -129,47 +129,62 @@ export function Navigation() {
             
             {/* Menu Panel */}
             <motion.div
-              className="fixed top-16 right-0 w-80 bg-black/90 backdrop-blur-md border-l border-white/10 h-[calc(100vh-4rem)] md:hidden"
+              className="fixed top-0 right-0 w-full max-w-sm bg-gradient-to-b from-gray-900 to-black backdrop-blur-md h-full md:hidden"
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
             >
-              <div className="flex flex-col p-6 space-y-6">
-                {navigation.map((item, index) => (
-                  <motion.div
-                    key={item.name}
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.3, delay: index * 0.1 }}
-                  >
-                    <Link
-                      href={item.href}
-                      className="block text-lg font-medium text-white hover:text-accent transition-colors duration-200"
-                      onClick={(e) => {
-                        handleNavClick(e, item.href);
-                        setIsMobileMenuOpen(false);
-                      }}
-                    >
-                      {item.name}
-                    </Link>
-                  </motion.div>
-                ))}
-                
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.3, delay: 0.8 }}
-                  className="pt-4 border-t border-white/10"
-                >
-                  <Button
-                    asChild
-                    className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold shadow-lg shadow-blue-500/25 transition-all duration-250"
+              <div className="flex flex-col h-full">
+                {/* Header */}
+                <div className="flex items-center justify-between px-6 h-16 border-b border-white/10">
+                  <span className="text-lg font-bold text-white">Menu</span>
+                  <button
                     onClick={() => setIsMobileMenuOpen(false)}
+                    className="text-gray-400 hover:text-white transition-colors"
+                    aria-label="Close menu"
                   >
-                    <Link href="/contact">Book Strategy Call</Link>
-                  </Button>
-                </motion.div>
+                    <X className="w-6 h-6" />
+                  </button>
+                </div>
+
+                {/* Navigation Links */}
+                <div className="flex-1 flex flex-col p-6 space-y-6">
+                  {navigation.map((item, index) => (
+                    <motion.div
+                      key={item.name}
+                      initial={{ opacity: 0, x: 20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.3, delay: index * 0.1 }}
+                    >
+                      <Link
+                        href={item.href}
+                        className="block text-lg font-medium text-white hover:text-accent transition-colors duration-200"
+                        onClick={(e) => {
+                          handleNavClick(e, item.href);
+                          setIsMobileMenuOpen(false);
+                        }}
+                      >
+                        {item.name}
+                      </Link>
+                    </motion.div>
+                  ))}
+                  
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.3, delay: 0.8 }}
+                    className="pt-4 border-t border-white/10"
+                  >
+                    <Button
+                      asChild
+                      className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold shadow-lg shadow-blue-500/25 transition-all duration-250"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      <Link href="/contact">Book Strategy Call</Link>
+                    </Button>
+                  </motion.div>
+                </div>
               </div>
             </motion.div>
           </>
