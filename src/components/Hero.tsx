@@ -2,19 +2,13 @@
 
 import React from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowRight, CheckCircle, Star, TrendingUp, Users, Zap, Shield, Award } from "lucide-react";
+import { ArrowRight, Star, TrendingUp, Users, Zap, Shield, Award } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-import { useEffect, useState, useRef } from "react";
 
 export function Hero() {
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 500], [0, -50]);
-  const [isLoaded, setIsLoaded] = useState(false);
-
-  useEffect(() => {
-    setIsLoaded(true);
-  }, []);
 
   return (
     <section className="relative min-h-screen md:min-h-[700px] lg:min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-gray-900 to-black pb-0">

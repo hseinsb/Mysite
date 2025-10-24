@@ -22,12 +22,8 @@ export function IntakeForm() {
   const {
     register,
     handleSubmit,
-    setValue,
-    watch,
     formState: { errors, isValid },
   } = useForm<FormData>();
-
-  const watchedValues = watch();
 
   const onSubmit = async (data: FormData) => {
     setIsSubmitting(true);

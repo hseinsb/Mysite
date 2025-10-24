@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Zap, Bot, BarChart3, ArrowRight, CheckCircle, DollarSign, TrendingUp } from "lucide-react";
+import { Zap, Bot, BarChart3, ArrowRight, CheckCircle, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 

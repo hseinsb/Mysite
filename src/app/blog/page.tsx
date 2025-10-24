@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import Link from "next/link";
-import { ArrowRight, DollarSign, Wrench, Sparkles, TrendingUp, Shield, Lightbulb } from "lucide-react";
+import { ArrowRight, DollarSign, Wrench, Sparkles, TrendingUp, Shield } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export const metadata: Metadata = {

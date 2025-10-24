@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Package, ArrowRight, Download, Clock, CheckCircle } from "lucide-react";
+import { Package, ArrowRight, Download, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const benefits = [
@@ -105,7 +105,7 @@ export function TemplatesHero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1 }}
           >
-            {stats.map((stat, index) => (
+            {stats.map((stat) => (
               <div key={stat.label} className="text-center">
                 <div className="text-2xl font-bold text-accent mb-1">{stat.value}</div>
                 <div className="text-sm text-muted">{stat.label}</div>

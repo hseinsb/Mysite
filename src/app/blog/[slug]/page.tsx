@@ -6,7 +6,16 @@ import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 
 // This would typically come from a CMS or database
-const blogPosts: Record<string, any> = {
+interface BlogPost {
+  title: string;
+  description: string;
+  content: string;
+  publishedAt: string;
+  category: string;
+  readTime: string;
+}
+
+const blogPosts: Record<string, BlogPost> = {
   "do-i-need-website-for-business": {
     title: "Do I Need a Website for My Business in 2025?",
     description: "Discover why having a website is essential for business growth, credibility, and customer reach—even for small local businesses.",
