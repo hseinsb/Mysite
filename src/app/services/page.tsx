@@ -72,7 +72,7 @@ export default function ServicesPage() {
                   WordPress Website Design
                 </h3>
                 <p className="text-accent font-semibold mb-6 text-lg">
-                  Starting at $1,500
+                  Starting at $499
                 </p>
                 <p className="text-gray-300 mb-6">
                   Custom WordPress sites with modern design, SEO optimization, and mobile responsiveness for businesses ready to grow online.
