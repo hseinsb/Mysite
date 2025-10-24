@@ -84,12 +84,18 @@ export function AboutProof() {
           ))}
         </div>
 
+        {/* Visual Divider */}
+        <div className="my-16 flex items-center gap-4">
+          <div className="flex-1 h-px bg-gradient-to-r from-transparent via-gray-700 to-transparent"></div>
+          <span className="text-gray-600 text-sm">•••</span>
+          <div className="flex-1 h-px bg-gradient-to-r from-transparent via-gray-700 to-transparent"></div>
+        </div>
+
         {/* Press Bio */}
         <motion.div
-          className="mt-16"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
           <div className="bg-card/10 backdrop-blur-sm border border-white/5 rounded-2xl p-8 max-w-4xl mx-auto">

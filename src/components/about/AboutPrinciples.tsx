@@ -82,12 +82,19 @@ export function AboutPrinciples() {
           ))}
         </div>
 
+        {/* Visual Divider */}
+        <div className="my-16 flex items-center gap-4">
+          <div className="flex-1 h-px bg-gradient-to-r from-transparent via-gray-700 to-transparent"></div>
+          <span className="text-gray-600 text-sm">•••</span>
+          <div className="flex-1 h-px bg-gradient-to-r from-transparent via-gray-700 to-transparent"></div>
+        </div>
+
         {/* Quote */}
         <motion.div
-          className="mt-16 text-center"
+          className="text-center"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
           <div className="bg-card/20 backdrop-blur-sm border border-white/10 rounded-2xl p-8 max-w-3xl mx-auto">
