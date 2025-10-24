@@ -84,24 +84,6 @@ export function AboutProof() {
           ))}
         </div>
 
-        {/* Why Clients Hire Me */}
-        <motion.div
-          className="text-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          viewport={{ once: true }}
-        >
-          <div className="bg-card/20 backdrop-blur-sm border border-white/10 rounded-2xl p-8 max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold mb-6 text-white">Why Clients Hire Me</h3>
-            <p className="text-lg text-muted leading-relaxed">
-              You don't need another "website." You need infrastructure: a clear offer, a clean funnel, 
-              money in the right account, and follow-ups that happen without you. I design that system, 
-              build it, and hand it to you with receipts.
-            </p>
-          </div>
-        </motion.div>
-
         {/* Press Bio */}
         <motion.div
           className="mt-16"
