@@ -705,7 +705,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
             </p>
             <a
               href="/contact"
-              className="inline-block px-8 py-4 bg-accent hover:bg-accent-2 text-white font-semibold rounded-xl transition-all duration-200 hover:scale-105"
+              className="inline-block px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold rounded-xl transition-all duration-200 hover:scale-105 border border-blue-500/50"
             >
               Get Your Free Quote
             </a>
