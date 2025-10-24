@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { ArrowRight, Linkedin, Youtube, Instagram } from "lucide-react";
+import { ArrowRight, Linkedin, Instagram } from "lucide-react";
 
 const navigation = {
   services: [
@@ -22,9 +22,8 @@ const navigation = {
 };
 
 const socialLinks = [
-  { name: "LinkedIn", href: "https://linkedin.com/in/husseinsbeiti", icon: Linkedin },
-  { name: "YouTube", href: "https://youtube.com/@husseinsbeiti", icon: Youtube },
-  { name: "Instagram", href: "https://instagram.com/husseinsbeiti", icon: Instagram },
+  { name: "LinkedIn", href: "https://www.linkedin.com/in/husseinsbeiti/", icon: Linkedin },
+  { name: "Instagram", href: "https://www.instagram.com/husseinbuilds/", icon: Instagram },
 ];
 
 export function Footer() {
