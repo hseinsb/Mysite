@@ -129,7 +129,11 @@ export function ExitIntentPopup() {
                     asChild
                     className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold shadow-lg shadow-blue-500/25 h-12"
                   >
-                    <Link href="/contact" className="flex items-center justify-center gap-2">
+                    <Link 
+                      href="/contact" 
+                      className="flex items-center justify-center gap-2"
+                      onClick={closePopup}
+                    >
                       <span>Book Free Strategy Call</span>
                       <ArrowRight className="w-4 h-4" />
                     </Link>
