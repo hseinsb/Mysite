@@ -4,22 +4,29 @@ import { Footer } from "@/components/Footer";
 import { IntakeForm } from "@/components/IntakeForm";
 
 export const metadata: Metadata = {
-  title: "Contact | Hussein Sbeiti - Get Your Free Strategy Call",
-  description: "Get in touch to discuss your project. Fill out the form and let's build something great together. Free strategy call included.",
-  keywords: ["contact", "get in touch", "project inquiry", "consultation", "free strategy call", "automation consultation"],
+  title: "Get a Quote | Website Development Cost & Free Consultation",
+  description: "Ready to hire a professional website developer? Get transparent pricing, discuss your website development cost, and start with a free strategy call.",
+  keywords: [
+    "website development cost",
+    "hire professional website developer",
+    "website designers for hire",
+    "get a quote",
+    "free consultation",
+    "website pricing",
+  ],
   alternates: {
     canonical: "https://hussbuilds.com/contact",
   },
   openGraph: {
-    title: "Contact | Hussein Sbeiti - Get Your Free Strategy Call",
-    description: "Get in touch to discuss your project. Fill out the form and let's build something great together.",
+    title: "Get a Quote | Website Development Cost & Free Consultation",
+    description: "Ready to hire a professional website developer? Get transparent pricing and start with a free strategy call.",
     url: "https://hussbuilds.com/contact",
     images: ["/og-image.png"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Contact | Hussein Sbeiti",
-    description: "Get in touch to discuss your project. Free strategy call included.",
+    title: "Get a Quote | Website Development Cost",
+    description: "Hire a professional website developer. Free consultation included.",
     images: ["/og-image.png"],
   },
 };

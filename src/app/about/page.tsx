@@ -8,22 +8,30 @@ import { AboutProof } from "@/components/about/AboutProof";
 import { IntakeForm } from "@/components/IntakeForm";
 
 export const metadata: Metadata = {
-  title: "About Hussein Sbeiti | Systems Architect",
-  description: "Lebanese immigrant turned systems architect. From labor jobs at 16 to building six-figure revenue systems. Ethics over hype, outcomes over deliverables.",
-  keywords: ["Hussein Sbeiti", "systems architect", "entrepreneur", "automation", "Lebanese", "immigrant story"],
+  title: "About Hussein | Professional Website Developer & AI Automation Expert",
+  description: "Meet Hussein Sbeiti—a professional website developer specializing in AI-powered automation and custom web solutions. From systems architecture to smart website builders.",
+  keywords: [
+    "Hussein Sbeiti",
+    "professional website developer",
+    "website designers for hire",
+    "ai website maker",
+    "automated website builder",
+    "systems architect",
+    "automation expert",
+  ],
   alternates: {
     canonical: "https://hussbuilds.com/about",
   },
   openGraph: {
-    title: "About Hussein Sbeiti | Systems Architect",
-    description: "Lebanese immigrant turned systems architect. From labor jobs at 16 to building six-figure revenue systems. Ethics over hype, outcomes over deliverables.",
+    title: "About Hussein | Professional Website Developer & AI Automation Expert",
+    description: "Meet Hussein Sbeiti—a professional website developer specializing in AI-powered automation and custom web solutions.",
     url: "https://hussbuilds.com/about",
     images: ["/og-image.png"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "About Hussein Sbeiti | Systems Architect",
-    description: "Lebanese immigrant turned systems architect. From labor jobs at 16 to building six-figure revenue systems.",
+    title: "About Hussein | Professional Website Developer",
+    description: "Professional website developer specializing in AI-powered automation and custom solutions.",
     images: ["/og-image.png"],
   },
 };

@@ -7,8 +7,10 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navigation = [
-  { name: "Services", href: "#services" },
+  { name: "Services", href: "/services" },
   { name: "Portfolio", href: "#portfolio" },
+  { name: "Blog", href: "/blog" },
+  { name: "FAQ", href: "/faq" },
   { name: "About", href: "/about" },
 ];
 
