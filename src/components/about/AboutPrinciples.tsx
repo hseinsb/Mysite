@@ -32,7 +32,7 @@ const principles = [
 
 export function AboutPrinciples() {
   return (
-    <section className="py-24">
+    <section className="pt-24 pb-8">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
           className="text-center mb-16"

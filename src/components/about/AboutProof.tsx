@@ -32,7 +32,7 @@ const achievements = [
 
 export function AboutProof() {
   return (
-    <section className="py-24 bg-gradient-to-b from-transparent to-black/20">
+    <section className="pt-24 pb-8 bg-gradient-to-b from-transparent to-black/20">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
           className="text-center mb-16"
