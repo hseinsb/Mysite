@@ -104,13 +104,13 @@ export function ExitIntentPopup() {
 
           {/* Popup */}
           <motion.div
-            className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 w-full max-w-lg mx-4 max-h-[90vh] overflow-y-auto"
-            initial={{ opacity: 0, scale: 0.9, y: -20 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.9, y: -20 }}
+            className="fixed inset-0 z-50 flex items-center justify-center p-4"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.9 }}
             transition={{ type: "spring", damping: 25, stiffness: 300 }}
           >
-            <div className="bg-gradient-to-br from-gray-900 to-black border border-blue-500/30 rounded-2xl shadow-2xl shadow-blue-500/20 p-5 sm:p-8 relative overflow-hidden">
+            <div className="w-full max-w-lg max-h-[90vh] overflow-y-auto bg-gradient-to-br from-gray-900 to-black border border-blue-500/30 rounded-2xl shadow-2xl shadow-blue-500/20 p-5 sm:p-8 relative">
               {/* Close Button */}
               <button
                 onClick={closePopup}
