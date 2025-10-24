@@ -77,7 +77,9 @@ const blogPosts: Record<string, any> = {
       
       <p>The question isn't "do I need a website," but <strong>"how quickly can I get one up and running?"</strong></p>
 
-      <p>Ready to get started? <a href="/contact">Get a free quote</a> and let's build a website that works for your business.</p>
+      <p>Ready to get started? <a href="/contact" class="inline-block px-8 py-4 bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white font-semibold rounded-xl transition-all duration-200 hover:scale-105 border border-purple-500/50 no-underline">Get Your Free Quote</a></p>
+      
+      <p>Let's build a website that works for your business.</p>
     `,
     publishedAt: "2025-01-15",
     category: "Business Strategy",
