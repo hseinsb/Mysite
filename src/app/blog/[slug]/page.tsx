@@ -738,11 +738,13 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
               [&>h2]:text-white [&>h2]:text-4xl [&>h2]:font-bold [&>h2]:mt-24 [&>h2]:mb-12 
               [&>h2]:pb-6 [&>h2]:border-b-2 [&>h2]:border-gradient-to-r [&>h2]:border-blue-500/30 
               [&>h2]:tracking-tight [&>h2]:scroll-mt-24
+              [&>h2]:drop-shadow-[0_0_8px_rgba(96,165,250,0.5)]
               
               [&>h3]:text-white [&>h3]:text-2xl [&>h3]:font-bold [&>h3]:mt-16 [&>h3]:mb-8
               [&>h3]:pb-4 [&>h3]:border-b [&>h3]:border-gray-800/50 [&>h3]:scroll-mt-24
               [&>h3]:bg-gradient-to-r [&>h3]:from-blue-500/5 [&>h3]:to-transparent 
               [&>h3]:pl-6 [&>h3]:py-4 [&>h3]:rounded-lg [&>h3]:-ml-6
+              [&>h3]:drop-shadow-[0_0_6px_rgba(96,165,250,0.4)]
               
               [&>ul]:my-10 [&>ul]:space-y-5 [&>ul]:bg-gray-900/40 [&>ul]:border [&>ul]:border-gray-800/50 
               [&>ul]:rounded-2xl [&>ul]:p-8 [&>ul]:backdrop-blur-sm
