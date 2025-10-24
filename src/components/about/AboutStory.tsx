@@ -23,7 +23,7 @@ const timeline = [
     icon: Zap,
     title: "Agency Success",
     description: "Built a digital talent management agency on subscription platforms—scaled to six-figure revenue, then exited for values.",
-    color: "from-accent to-accent-2"
+    color: "from-yellow-500 to-amber-600"
   },
   {
     period: "2025–Now",

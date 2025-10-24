@@ -20,7 +20,7 @@ const principles = [
     icon: Zap,
     title: "Speed with clarity",
     description: "Ship fast, document, automate, hand off.",
-    color: "from-accent to-accent-2"
+    color: "from-yellow-500 to-amber-600"
   },
   {
     icon: ArrowRightLeft,
