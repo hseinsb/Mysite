@@ -140,7 +140,7 @@ export default function FAQPage() {
             </p>
             <a
               href="/contact"
-              className="inline-block px-8 py-4 bg-accent hover:bg-accent-2 text-black font-semibold rounded-xl transition-all duration-200 hover:scale-105"
+              className="inline-block px-8 py-4 bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white font-semibold rounded-xl transition-all duration-200 hover:scale-105 border border-purple-500/50"
             >
               Get Your Free Quote
             </a>
