@@ -36,7 +36,7 @@ const blogPosts = [
     icon: TrendingUp,
     readTime: "5 min read",
     author: "Hussein Sbeiti",
-    updated: "Oct 2025",
+    updated: "Sep 2024",
   },
   {
     title: "The True Cost of Running a Business Without a Website",
@@ -46,7 +46,7 @@ const blogPosts = [
     icon: DollarSign,
     readTime: "6 min read",
     author: "Hussein Sbeiti",
-    updated: "Oct 2025",
+    updated: "Sep 2024",
   },
   {
     title: "Website Development Cost Guide: What You Should Actually Pay",
@@ -56,7 +56,7 @@ const blogPosts = [
     icon: DollarSign,
     readTime: "8 min read",
     author: "Hussein Sbeiti",
-    updated: "Oct 2025",
+    updated: "Aug 2024",
   },
   {
     title: "AI Website Maker vs Custom Development: Which Is Right for You?",
@@ -66,7 +66,7 @@ const blogPosts = [
     icon: Sparkles,
     readTime: "7 min read",
     author: "Hussein Sbeiti",
-    updated: "Oct 2025",
+    updated: "Aug 2024",
   },
   {
     title: "Website Redesign Cost Breakdown: Budget & Timeline Guide",
@@ -76,7 +76,7 @@ const blogPosts = [
     icon: Wrench,
     readTime: "6 min read",
     author: "Hussein Sbeiti",
-    updated: "Oct 2025",
+    updated: "Jul 2024",
   },
   {
     title: "Cheap Websites for Small Business: Worth It or Waste of Money?",
@@ -86,7 +86,7 @@ const blogPosts = [
     icon: Shield,
     readTime: "5 min read",
     author: "Hussein Sbeiti",
-    updated: "Oct 2025",
+    updated: "Jul 2024",
   },
 ];
 

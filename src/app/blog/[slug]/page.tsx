@@ -93,7 +93,7 @@ const blogPosts: Record<string, BlogPost> = {
       
       <p>Let's build a website that works for your business.</p>
     `,
-    publishedAt: "2025-01-15",
+    publishedAt: "2024-09-15",
     category: "Business Strategy",
     readTime: "5 min read",
   },
@@ -160,7 +160,7 @@ const blogPosts: Record<string, BlogPost> = {
       <h2>Take Action Today</h2>
       <p>Stop leaving money on the table. <a href="/contact" class="text-accent hover:underline">Get a free consultation</a> and discover how a professional website can transform your business growth.</p>
     `,
-    publishedAt: "2025-01-18",
+    publishedAt: "2024-09-18",
     category: "Business Strategy",
     readTime: "6 min read",
   },
@@ -273,7 +273,7 @@ const blogPosts: Record<string, BlogPost> = {
       <h2>Get a Fair, Transparent Quote</h2>
       <p>Every business has unique needs. <a href="/contact" class="text-accent hover:underline">Schedule a free consultation</a> to get a detailed, transparent quote tailored to your specific requirements—no surprises, no hidden fees.</p>
     `,
-    publishedAt: "2025-01-20",
+    publishedAt: "2024-08-20",
     category: "Pricing & Costs",
     readTime: "8 min read",
   },
@@ -363,7 +363,7 @@ const blogPosts: Record<string, BlogPost> = {
 
       <p>Not sure which approach is right for you? <a href="/contact" class="text-accent hover:underline">Schedule a free consultation</a> and we'll help you make the best decision for your business and budget.</p>
     `,
-    publishedAt: "2025-01-22",
+    publishedAt: "2024-08-22",
     category: "Technology",
     readTime: "7 min read",
   },
@@ -497,7 +497,7 @@ const blogPosts: Record<string, BlogPost> = {
       <h2>Get Your Custom Redesign Quote</h2>
       <p>Every website is unique, and so are redesign needs. <a href="/contact" class="text-accent hover:underline">Schedule a free consultation</a> to get a detailed quote and timeline for your specific project.</p>
     `,
-    publishedAt: "2025-01-25",
+    publishedAt: "2024-07-25",
     category: "Pricing & Costs",
     readTime: "6 min read",
   },
@@ -660,7 +660,7 @@ const blogPosts: Record<string, BlogPost> = {
       <h2>Get Honest Pricing for Your Needs</h2>
       <p>Not sure what you actually need? <a href="/contact" class="text-accent hover:underline">Schedule a free consultation</a> and get honest advice about the right solution for your budget and business goals—no pressure, no upselling.</p>
     `,
-    publishedAt: "2025-01-28",
+    publishedAt: "2024-07-28",
     category: "Small Business",
     readTime: "5 min read",
   },
