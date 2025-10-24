@@ -28,9 +28,9 @@ export function Navigation() {
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     if (href.startsWith('#')) {
+      e.preventDefault();
       // Check if we're on the homepage
       if (window.location.pathname === '/') {
-        e.preventDefault();
         const element = document.querySelector(href);
         if (element) {
           element.scrollIntoView({ behavior: 'smooth', block: 'start' });
