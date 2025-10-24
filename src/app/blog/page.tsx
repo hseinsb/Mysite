@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, DollarSign, Wrench, Sparkles, TrendingUp, Shield, Lightbulb } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export const metadata: Metadata = {
@@ -31,44 +31,62 @@ const blogPosts = [
   {
     title: "Do I Need a Website for My Business in 2025?",
     slug: "do-i-need-website-for-business",
-    excerpt: "Discover why having a website is essential for business growth, credibility, and customer reach—even for small local businesses.",
+    excerpt: "97% of customers search online first. Without a website, you're invisible—and losing revenue to competitors who show up.",
     category: "Business Strategy",
+    icon: TrendingUp,
     readTime: "5 min read",
+    author: "Hussein Sbeiti",
+    updated: "Oct 2025",
   },
   {
     title: "The True Cost of Running a Business Without a Website",
     slug: "cost-of-business-without-website",
-    excerpt: "Calculate the hidden costs of not having an online presence: lost customers, missed opportunities, and competitive disadvantage.",
+    excerpt: "Lost leads, missed automation, higher ad costs. Running without a site costs $10K-$50K+ annually in hidden losses.",
     category: "Business Strategy",
+    icon: DollarSign,
     readTime: "6 min read",
+    author: "Hussein Sbeiti",
+    updated: "Oct 2025",
   },
   {
     title: "Website Development Cost Guide: What You Should Actually Pay",
     slug: "website-development-cost-guide",
-    excerpt: "Transparent breakdown of website development costs, from basic sites to complex ecommerce platforms. Know what's fair before you hire.",
-    category: "Pricing & Costs",
+    excerpt: "Quotes range from $500 to $50K. Discover what most businesses overlook when budgeting—and how to avoid paying twice.",
+    category: "Web Design",
+    icon: DollarSign,
     readTime: "8 min read",
+    author: "Hussein Sbeiti",
+    updated: "Oct 2025",
   },
   {
     title: "AI Website Maker vs Custom Development: Which Is Right for You?",
     slug: "ai-website-maker-vs-custom-development",
-    excerpt: "Compare AI website builders with custom development. Learn the pros, cons, and when each approach makes sense for your business.",
-    category: "Technology",
+    excerpt: "AI builders promise fast sites for cheap. But what are you actually giving up? The truth about templates vs. custom code.",
+    category: "AI Development",
+    icon: Sparkles,
     readTime: "7 min read",
+    author: "Hussein Sbeiti",
+    updated: "Oct 2025",
   },
   {
     title: "Website Redesign Cost Breakdown: Budget & Timeline Guide",
     slug: "website-redesign-cost-breakdown",
-    excerpt: "Planning a website redesign? Understand the costs, timeline, and process to budget effectively and avoid surprises.",
-    category: "Pricing & Costs",
+    excerpt: "Your site's outdated and hurting conversions. Here's exactly what a redesign costs, how long it takes, and what to expect.",
+    category: "Web Design",
+    icon: Wrench,
     readTime: "6 min read",
+    author: "Hussein Sbeiti",
+    updated: "Oct 2025",
   },
   {
     title: "Cheap Websites for Small Business: Worth It or Waste of Money?",
     slug: "cheap-websites-small-business",
-    excerpt: "Exploring budget website options for small businesses. When to save money and when to invest in quality development.",
-    category: "Small Business",
+    excerpt: "Cheap sites save money upfront but cost more long-term. When DIY makes sense—and when it's better to invest.",
+    category: "SEO & Maintenance",
+    icon: Shield,
     readTime: "5 min read",
+    author: "Hussein Sbeiti",
+    updated: "Oct 2025",
   },
 ];
 
@@ -83,9 +101,8 @@ export default function BlogPage() {
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
               Website Development Blog
             </h1>
-            <p className="text-xl text-gray-300">
-              Guides, cost breakdowns, and strategies for building better websites. 
-              Learn about development costs, business needs, and smart technology choices.
+            <p className="text-xl text-gray-300 leading-relaxed">
+              Actionable guides on website design, pricing, and automation. Learn how to build, scale, and maintain your business website in 2025.
             </p>
           </div>
         </section>
@@ -98,25 +115,43 @@ export default function BlogPage() {
                 <Link key={post.slug} href={`/blog/${post.slug}`}>
                   <Card className="h-full bg-gray-900 border-gray-800 hover:border-accent/50 transition-all duration-300 hover:scale-105">
                     <CardHeader>
-                      <div className="flex items-center justify-between mb-2">
-                        <span className="text-xs text-accent font-semibold">
+                      {/* Icon */}
+                      <div className="mb-4">
+                        <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
+                          <post.icon className="w-6 h-6 text-white" />
+                        </div>
+                      </div>
+
+                      {/* Category & Read Time */}
+                      <div className="flex items-center justify-between mb-3">
+                        <span className="text-xs px-3 py-1 bg-accent/10 border border-accent/30 rounded-full text-accent font-semibold">
                           {post.category}
                         </span>
                         <span className="text-xs text-gray-500">
                           {post.readTime}
                         </span>
                       </div>
-                      <CardTitle className="text-xl text-white group-hover:text-accent">
+
+                      {/* Title */}
+                      <CardTitle className="text-xl text-white hover:text-accent transition-colors mb-3">
                         {post.title}
                       </CardTitle>
+
+                      {/* Author & Date */}
+                      <p className="text-xs text-gray-500 mb-4">
+                        By {post.author} · Updated {post.updated}
+                      </p>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-gray-400 text-sm mb-4">
+                      {/* Excerpt */}
+                      <p className="text-gray-400 text-sm mb-4 leading-relaxed">
                         {post.excerpt}
                       </p>
-                      <div className="flex items-center text-accent text-sm font-semibold">
+
+                      {/* CTA */}
+                      <div className="flex items-center text-accent text-sm font-semibold group">
                         Read More
-                        <ArrowRight className="w-4 h-4 ml-2" />
+                        <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                       </div>
                     </CardContent>
                   </Card>
