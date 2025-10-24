@@ -161,7 +161,7 @@ export function AboutStory() {
         </div>
 
         {/* Visual Divider */}
-        <div className="mt-16 md:mt-20 mb-0 flex items-center gap-3 md:gap-4 px-6">
+        <div className="mt-20 md:mt-24 mb-0 flex items-center gap-3 md:gap-4 px-6">
           <div className="flex-1 h-px bg-gradient-to-r from-transparent via-gray-600 to-transparent"></div>
           <span className="text-gray-500 text-sm">•••</span>
           <div className="flex-1 h-px bg-gradient-to-r from-transparent via-gray-600 to-transparent"></div>
