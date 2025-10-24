@@ -65,7 +65,7 @@ export function AboutProof() {
                   {/* Icon */}
                   <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${achievement.color} p-0.5 flex-shrink-0`}>
                     <div className="w-full h-full bg-card rounded-lg flex items-center justify-center">
-                      <achievement.icon className="w-6 h-6 text-white" />
+                      <achievement.icon className="w-6 h-6 text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]" />
                     </div>
                   </div>
 

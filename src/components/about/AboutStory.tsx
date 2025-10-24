@@ -86,7 +86,7 @@ export function AboutStory() {
                   <div className="bg-card/30 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:border-accent/30 transition-all duration-300">
                     <div className="flex items-center space-x-4 mb-4">
                       <div className={`w-12 h-12 bg-gradient-to-br ${item.color} rounded-xl flex items-center justify-center`}>
-                        <item.icon className="w-6 h-6 text-white" />
+                        <item.icon className="w-6 h-6 text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]" />
                       </div>
                       <div>
                         <div className="text-accent font-mono text-sm font-semibold">{item.period}</div>

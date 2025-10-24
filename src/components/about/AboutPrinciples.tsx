@@ -65,7 +65,7 @@ export function AboutPrinciples() {
                 <div className="mb-6">
                   <div className={`w-16 h-16 mx-auto rounded-xl bg-gradient-to-br ${principle.color} p-0.5`}>
                     <div className="w-full h-full bg-card rounded-xl flex items-center justify-center">
-                      <principle.icon className="w-8 h-8 text-white" />
+                      <principle.icon className="w-8 h-8 text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]" />
                     </div>
                   </div>
                 </div>
