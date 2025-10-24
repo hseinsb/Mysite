@@ -85,10 +85,10 @@ export function AboutProof() {
         </div>
 
         {/* Visual Divider */}
-        <div className="my-16 flex items-center gap-4">
-          <div className="flex-1 h-px bg-gradient-to-r from-transparent via-gray-700 to-transparent"></div>
-          <span className="text-gray-600 text-sm">•••</span>
-          <div className="flex-1 h-px bg-gradient-to-r from-transparent via-gray-700 to-transparent"></div>
+        <div className="my-12 md:my-16 flex items-center gap-3 md:gap-4 px-6">
+          <div className="flex-1 h-px bg-gradient-to-r from-transparent via-gray-600 to-transparent"></div>
+          <span className="text-gray-500 text-sm">•••</span>
+          <div className="flex-1 h-px bg-gradient-to-r from-transparent via-gray-600 to-transparent"></div>
         </div>
 
         {/* Press Bio */}
