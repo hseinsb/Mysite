@@ -91,11 +91,29 @@ export function AboutPrinciples() {
           viewport={{ once: true }}
         >
           <div className="bg-card/20 backdrop-blur-sm border border-white/10 rounded-2xl p-8 max-w-3xl mx-auto">
-            <blockquote className="text-xl md:text-2xl font-medium text-white leading-relaxed">
+            <blockquote className="text-xl md:text-2xl font-medium text-white leading-relaxed mb-6">
               "You don't need another 'website.' You need infrastructure: a clear offer, a clean funnel, money in the right account, and follow-ups that happen without you."
             </blockquote>
-            <cite className="text-accent font-semibold mt-4 block">— Hussein Sbeiti</cite>
+            <cite className="text-accent font-semibold block mb-8">— Hussein Sbeiti</cite>
+            
+            {/* Personal Close */}
+            <p className="text-lg text-muted leading-relaxed">
+              If you're ready to stop patching tools and start building infrastructure, let's talk.
+            </p>
           </div>
+        </motion.div>
+
+        {/* Emotional Climax */}
+        <motion.div
+          className="text-center mt-16 max-w-2xl mx-auto"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          viewport={{ once: true }}
+        >
+          <p className="text-xl md:text-2xl text-white/90 font-medium leading-relaxed">
+            Every system I build today started as survival. Now it's about helping others build their own.
+          </p>
         </motion.div>
 
         {/* Visual Divider */}

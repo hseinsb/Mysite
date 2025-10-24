@@ -8,30 +8,31 @@ import { AboutProof } from "@/components/about/AboutProof";
 import { IntakeForm } from "@/components/IntakeForm";
 
 export const metadata: Metadata = {
-  title: "About Hussein | Professional Website Developer & AI Automation Expert",
-  description: "Meet Hussein Sbeiti—a professional website developer specializing in AI-powered automation and custom web solutions. From systems architecture to smart website builders.",
+  title: "About Hussein Sbeiti — Systems Architect & Automation Strategist",
+  description: "From immigrant hustle to systems architecture. Hussein Sbeiti builds scalable funnels, automations, and AI workflows that turn attention into measurable revenue.",
   keywords: [
     "Hussein Sbeiti",
-    "professional website developer",
-    "website designers for hire",
-    "ai website maker",
-    "automated website builder",
     "systems architect",
-    "automation expert",
+    "automation strategist",
+    "funnel builder",
+    "AI workflows",
+    "business automation",
+    "revenue systems",
+    "digital infrastructure",
   ],
   alternates: {
     canonical: "https://hussbuilds.com/about",
   },
   openGraph: {
-    title: "About Hussein | Professional Website Developer & AI Automation Expert",
-    description: "Meet Hussein Sbeiti—a professional website developer specializing in AI-powered automation and custom web solutions.",
+    title: "About Hussein Sbeiti — Systems Architect & Automation Strategist",
+    description: "From immigrant hustle to systems architecture. Hussein Sbeiti builds scalable funnels, automations, and AI workflows that turn attention into measurable revenue.",
     url: "https://hussbuilds.com/about",
     images: ["/og-image.png"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "About Hussein | Professional Website Developer",
-    description: "Professional website developer specializing in AI-powered automation and custom solutions.",
+    title: "About Hussein Sbeiti — Systems Architect & Automation Strategist",
+    description: "From immigrant hustle to systems architecture. Building funnels, automations, and AI workflows that turn attention into revenue.",
     images: ["/og-image.png"],
   },
 };

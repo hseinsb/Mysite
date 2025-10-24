@@ -26,7 +26,7 @@ export function AboutHero() {
           
           <div className="prose prose-lg prose-invert max-w-none">
             <p className="text-lg text-muted leading-relaxed">
-              Lebanese, came to the U.S. at 16 with nothing but work ethic. I learned the game the hard way—labor jobs, deliveries, night shifts—then translated that grit into digital stacks that actually move a business.
+              I came to the U.S. at 16 with no money, no network—just work ethic. Labor jobs, late shifts, and rejection taught me what every business eventually learns: systems keep you alive.
             </p>
           </div>
         </motion.div>

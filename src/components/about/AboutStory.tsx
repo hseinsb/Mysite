@@ -37,15 +37,15 @@ const timeline = [
 const currentWork = [
   {
     title: "Done-For-You Systems",
-    description: "Funnels, Stripe/PayPal, CRM, AI automations, owner dashboards."
+    description: "Funnels, CRMs, automations"
   },
   {
     title: "Consulting",
-    description: "Architecture sessions that map the stack you actually need."
+    description: "Map the digital stack that fits your operations"
   },
   {
     title: "Education",
-    description: "Courses and templates for operators who want to build it themselves."
+    description: "For operators who prefer to build in-house"
   }
 ];
 
@@ -126,6 +126,22 @@ export function AboutStory() {
           ))}
         </div>
 
+        {/* Visual Bridge */}
+        <motion.div
+          className="text-center mb-16 max-w-3xl mx-auto"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <p className="text-xl md:text-2xl text-white/90 leading-relaxed mb-4">
+            Every phase taught me something—discipline, failure, leverage, clarity.
+          </p>
+          <p className="text-lg text-muted">
+            Now I build what I wish I had: systems that do the work, so you can do the thinking.
+          </p>
+        </motion.div>
+
         {/* What I Do Now */}
         <motion.div
           className="text-center mb-12"
@@ -137,12 +153,9 @@ export function AboutStory() {
           <h2 className="text-3xl md:text-4xl font-bold font-display mb-4">
             What I Do Now
           </h2>
-          <p className="text-lg text-muted max-w-2xl mx-auto">
-            Three ways to work with me, depending on your timeline and goals.
-          </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8 mb-8">
           {currentWork.map((work, index) => (
             <motion.div
               key={work.title}
@@ -153,12 +166,28 @@ export function AboutStory() {
               viewport={{ once: true }}
             >
               <div className="bg-card/20 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:border-accent/30 transition-all duration-300 h-full">
-                <h3 className="text-xl font-semibold mb-4 text-accent">{work.title}</h3>
-                <p className="text-muted leading-relaxed">{work.description}</p>
+                <div className="flex items-start gap-3 mb-3">
+                  <span className="text-accent text-2xl mt-1">✓</span>
+                  <h3 className="text-xl font-semibold text-white text-left">{work.title}</h3>
+                </div>
+                <p className="text-muted leading-relaxed text-left">{work.description}</p>
               </div>
             </motion.div>
           ))}
         </div>
+
+        {/* Social Proof */}
+        <motion.div
+          className="text-center"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          <p className="text-muted italic">
+            Trusted by creators, local businesses, and growing agencies.
+          </p>
+        </motion.div>
 
         {/* Visual Divider */}
         <div className="mt-20 md:mt-24 mb-0 flex items-center gap-3 md:gap-4 px-6">
