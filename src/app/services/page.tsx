@@ -54,7 +54,7 @@ export default function ServicesPage() {
         </section>
 
         {/* Pricing Details Section */}
-        <section className="py-16 bg-black">
+        <section className="pt-16 pb-8 bg-black">
           <div className="max-w-6xl mx-auto px-6">
             <h2 className="text-3xl font-bold mb-12 text-center text-white">
               Website Design Packages & Prices
