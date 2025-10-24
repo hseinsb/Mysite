@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
+import Script from "next/script";
 import {
   Accordion,
   AccordionContent,
@@ -45,119 +46,129 @@ export const metadata: Metadata = {
 };
 
 const faqs = [
+  // Trust-Building Questions First
   {
-    question: "How much does website development cost?",
-    answer: "Website development costs vary based on complexity, features, and customization. A basic website starts around $1,000-$2,500, while custom ecommerce or enterprise solutions range from $5,000-$15,000+. Factors include design complexity, functionality, integrations, and ongoing maintenance needs.",
-  },
-  {
-    question: "What are typical web design fees?",
-    answer: "Web design fees depend on project scope and designer experience. Hourly rates typically range from $75-$200/hour. Fixed-price projects offer more predictability—simple sites ($1,500-$3,000), business sites ($3,000-$7,500), and complex applications ($7,500+). All my projects include transparent, upfront pricing.",
-  },
-  {
-    question: "Do you offer WordPress monthly maintenance packages?",
-    answer: "Yes! WordPress monthly maintenance packages include regular updates, security monitoring, backups, performance optimization, and technical support. Packages start at $150/month for basic maintenance and scale up to $500+/month for comprehensive enterprise support with priority response times.",
-  },
-  {
-    question: "How do I get a website redesign quote?",
-    answer: "Getting a website redesign quote is simple: fill out the contact form with your current site URL, goals, and timeline. I'll review your existing site, discuss your vision, and provide a detailed quote within 24-48 hours. Most redesigns range from $2,500-$10,000 depending on scope.",
-  },
-  {
-    question: "What are your web design rates per hour?",
-    answer: "My web design rates are $125/hour for custom development work. However, I primarily work on fixed-price projects to give you cost certainty. This approach ensures you know exactly what you'll pay upfront, with no surprise hourly charges or scope creep.",
-  },
-  {
-    question: "What are typical ecommerce website costs?",
-    answer: "Ecommerce website costs range from $3,000 for basic Shopify setups to $15,000+ for custom WooCommerce or headless commerce solutions. Costs include design, product catalog setup, payment processing, shipping integration, and security. Monthly costs for hosting, maintenance, and transaction fees typically run $200-$500/month.",
-  },
-  {
-    question: "What's included in website development charges?",
-    answer: "Website development charges cover design, development, testing, deployment, and initial training. This includes responsive design, SEO optimization, security setup, content management system, contact forms, and basic analytics. Ongoing costs like hosting, maintenance, and updates are separate and clearly outlined.",
-  },
-  {
-    question: "Do you charge for website redesign consultations?",
-    answer: "No! Initial consultations and website redesign quotes are completely free. During our 30-minute call, we'll discuss your current site, goals, timeline, and budget. You'll get honest feedback and a clear path forward—no obligation to move forward.",
-  },
-  {
-    question: "What payment terms do you offer?",
-    answer: "I offer flexible payment terms: 50% deposit to start, 50% upon completion for projects under $5,000. Larger projects can be split into milestone payments (e.g., 33% deposit, 33% at midpoint, 34% at launch). All terms are clearly outlined in the project agreement before work begins.",
-  },
-  {
-    question: "Are there hidden fees in your web design pricing?",
-    answer: "Absolutely not. My web design pricing is transparent and all-inclusive for the agreed scope. You'll receive a detailed quote covering design, development, revisions, and launch. The only additional costs are third-party services you choose (hosting, domains, premium plugins), which I'll recommend but you'll purchase directly.",
-  },
-  {
-    question: "How long does website development take?",
-    answer: "Timeline depends on project complexity: simple sites (2-3 weeks), business sites with custom features (4-6 weeks), ecommerce or complex applications (8-12 weeks). Rush projects available for an additional 25% fee. Timeline is confirmed in your project proposal.",
-  },
-  {
-    question: "Do you offer website maintenance after launch?",
-    answer: "Yes! All projects include 30 days of post-launch support. After that, you can choose a monthly maintenance package or pay-as-you-go hourly support. Maintenance includes updates, backups, security monitoring, and technical support to keep your site running smoothly.",
-  },
-  {
-    question: "Does my business really need a website?",
-    answer: "Yes, absolutely. In 2025, 97% of consumers search online before making a purchase. Without a website, you're invisible to most potential customers. A website builds credibility, works 24/7 to generate leads, and gives you control over your brand—something social media alone can't provide.",
+    question: "Does my business really need a website in 2025?",
+    answer: "Yes, absolutely. 97% of consumers search online before buying, and without a website you're invisible to most potential customers. A website builds credibility, generates leads 24/7, and gives you control over your brand.",
   },
   {
     question: "Can I run a business without a website?",
-    answer: "While technically possible, running a business without a website means lost revenue. Studies show businesses without websites lose 10-50% of potential customers to competitors with online presence. You'll rely on expensive advertising and word-of-mouth only, limiting your growth potential significantly.",
+    answer: "While possible, businesses without websites lose 10-50% of potential customers to competitors. You'll rely on expensive advertising and word-of-mouth only, severely limiting growth.",
   },
   {
-    question: "How much does a 5 page website cost?",
-    answer: "A professional 5-page website typically costs $2,000-$4,000. This includes custom design, mobile responsiveness, SEO optimization, contact forms, and basic integrations. DIY builders are cheaper ($300-$800) but lack customization and professional polish that converts visitors into customers.",
+    question: "Do people still hire web designers in 2025?",
+    answer: "Absolutely. Professional web designer demand is growing despite DIY tools. Businesses hire designers for custom functionality, SEO optimization, and conversion-focused design that DIY tools can't match.",
   },
   {
-    question: "How much is a 20 page website?",
-    answer: "A 20-page website ranges from $5,000-$12,000 depending on complexity, custom features, and content requirements. This typically includes content management system, advanced SEO, custom functionality, and multiple integrations. Enterprise sites with custom applications can exceed $15,000.",
+    question: "What's included in your website development packages?",
+    answer: "All packages include responsive design, SEO optimization, security setup, content management system, contact forms, basic analytics, testing, deployment, and initial training. Ongoing costs like hosting and maintenance are separate.",
   },
   {
-    question: "How much to charge for a 10 page website?",
-    answer: "A 10-page custom website typically costs $3,500-$7,500. This includes professional design, responsive development, SEO optimization, content integration, and launch support. The exact price depends on features like e-commerce, custom forms, API integrations, or specialized functionality.",
+    question: "What's your website development process?",
+    answer: "Discovery & strategy (1-2 weeks) → Design & approval (1-2 weeks) → Development & testing (2-4 weeks) → Launch & training (1 week). You get regular updates and 2-3 revision rounds at each phase.",
+  },
+  
+  // Timeline Questions
+  {
+    question: "How long does it take to build a professional website?",
+    answer: "Simple sites take 2-3 weeks, business sites with custom features take 4-6 weeks, and ecommerce or complex applications take 8-12 weeks. Rush projects available for an additional 25% fee.",
   },
   {
-    question: "How much does it cost to hire a web designer?",
-    answer: "Hiring a web designer costs $1,000-$15,000+ depending on project scope. Freelancers charge $50-$150/hour, while agencies charge $100-$300/hour. Fixed-price projects are more common and predictable—simple sites ($1,500-$3,000), business sites ($3,000-$7,500), complex sites ($7,500+).",
+    question: "Do you provide ongoing website maintenance and support?",
+    answer: "Yes! All projects include 30 days post-launch support. After that, choose monthly maintenance packages ($99-$399/month) or pay-as-you-go hourly support for updates, backups, security monitoring, and technical help.",
+  },
+  
+  // Pricing Questions
+  {
+    question: "How much does it cost to build a professional website in 2025?",
+    answer: "Basic websites start at $999-$2,500, custom business sites run $3,000-$7,500, and ecommerce or enterprise solutions range from $5,000-$15,000+. Cost depends on complexity, features, customization, and integrations.",
   },
   {
-    question: "How much should I expect to pay for a website design?",
-    answer: "Expect to pay $2,000-$5,000 for a quality business website. Budget sites ($500-$1,500) often use templates with minimal customization. Premium custom designs ($5,000-$15,000+) include advanced features, custom development, and comprehensive SEO. Your investment should match your business goals and competitive position.",
+    question: "What's the average price for a small business website?",
+    answer: "Expect $2,000-$5,000 for a quality business website with custom design, SEO, and professional functionality. Budget templates ($500-$1,500) lack customization; premium custom sites ($5,000+) include advanced features and comprehensive SEO.",
   },
   {
-    question: "Do people still hire web designers?",
-    answer: "Absolutely. Despite DIY tools, professional web designer demand is growing. Businesses hire designers for custom functionality, professional branding, SEO optimization, and conversion-focused design that DIY tools can't match. Good design pays for itself through increased conversions and professional credibility.",
+    question: "How much does a 5-page website cost?",
+    answer: "Professional 5-page websites cost $2,000-$4,000 including custom design, mobile responsiveness, SEO, and integrations. DIY builders are cheaper ($300-$800) but lack the polish that converts visitors into customers.",
   },
   {
-    question: "Is it cheaper to DIY website design?",
-    answer: "DIY website design is cheaper upfront ($10-$50/month) but often costs more long-term. You'll spend 40-80 hours learning, designing, and troubleshooting—time better spent running your business. DIY sites often underperform in conversions, SEO, and mobile experience, costing you customers. Professional design typically pays for itself within 6-12 months.",
+    question: "How much does a 10-page website cost?",
+    answer: "A 10-page custom website costs $3,500-$7,500 including professional design, responsive development, SEO optimization, and launch support. Price varies based on e-commerce, custom forms, or specialized functionality.",
   },
   {
-    question: "Which website builder is the best for small business?",
-    answer: "For small businesses, WordPress (self-hosted) offers the best long-term value with full customization and ownership. Shopify is ideal for e-commerce. Wix and Squarespace work for very simple needs but limit growth. Custom-built sites on Next.js or similar frameworks provide maximum performance and flexibility for serious businesses.",
+    question: "How much is a 20-page website?",
+    answer: "A 20-page website ranges from $5,000-$12,000 depending on complexity and features. Includes content management, advanced SEO, custom functionality, and multiple integrations. Enterprise sites can exceed $15,000.",
   },
+  {
+    question: "What are typical ecommerce website costs?",
+    answer: "Ecommerce sites range from $3,000 for basic Shopify setups to $15,000+ for custom WooCommerce solutions. Includes design, catalog setup, payment processing, shipping integration, and security. Monthly costs run $200-$500.",
+  },
+  {
+    question: "Are there any hidden fees in your pricing?",
+    answer: "Absolutely not. Pricing is transparent and all-inclusive for the agreed scope. The only additional costs are third-party services you choose (hosting, domains, premium plugins), which you purchase directly.",
+  },
+  
+  // Payment & Process Questions
+  {
+    question: "What payment terms do you offer?",
+    answer: "50% deposit to start development and 50% upon completion before handoff. Larger projects can be split into milestones (33% deposit, 33% midpoint, 34% launch).",
+  },
+  {
+    question: "Do you charge for website redesign consultations?",
+    answer: "No! Initial consultations and redesign quotes are completely free. Get honest feedback and a clear path forward with no obligation.",
+  },
+  
+  // Platform Comparison Questions
   {
     question: "Is WordPress or Wix better for small business?",
-    answer: "WordPress is better for most small businesses. It offers unlimited customization, better SEO capabilities, no transaction fees, and true ownership. Wix is easier to start but limits growth with platform lock-in, slower speeds, and less flexibility. WordPress sites also have higher resale value if you ever sell your business.",
+    answer: "WordPress is better for most small businesses—unlimited customization, better SEO, no transaction fees, and true ownership. Wix is easier to start but limits growth with platform lock-in, slower speeds, and less flexibility.",
   },
   {
     question: "What is the downside of Wix?",
-    answer: "Wix downsides include platform lock-in (can't move your site), slower load speeds, limited SEO capabilities, monthly fees that add up, generic templates competitors also use, and restricted customization. For growing businesses, these limitations often force a costly rebuild to a more flexible platform within 2-3 years.",
+    answer: "Platform lock-in (can't move your site), slower load speeds, limited SEO capabilities, monthly fees that add up, generic templates, and restricted customization. Growing businesses often need a costly rebuild within 2-3 years.",
   },
   {
-    question: "How much should I pay for someone to manage my website?",
-    answer: "Website management costs $100-$500/month depending on services. Basic maintenance (updates, backups, security) runs $100-$200/month. Comprehensive management including content updates, SEO, analytics, and support costs $300-$500/month. Pay-as-you-go hourly support runs $75-$150/hour for occasional needs.",
-  },
-  {
-    question: "Do you still need a website in 2025?",
-    answer: "More than ever. In 2025, a website is non-negotiable for credible businesses. 84% of consumers research businesses online before buying. AI search tools and voice assistants prioritize businesses with strong websites. Social media alone isn't enough—algorithms change overnight, but you own your website forever.",
+    question: "Which website builder is the best for small business?",
+    answer: "WordPress (self-hosted) offers the best long-term value with full customization and ownership. Shopify is ideal for e-commerce. Custom-built sites provide maximum performance and flexibility for serious businesses.",
   },
   {
     question: "Is Wix or Shopify better for small business?",
-    answer: "It depends on your business type. Shopify is superior for product-based businesses with its powerful e-commerce features, while Wix works better for service businesses or simple informational sites. For serious online stores, Shopify's inventory management, payment processing, and sales features justify the higher cost.",
+    answer: "Depends on your business type. Shopify is superior for product-based businesses with powerful e-commerce features. Wix works better for service businesses or simple informational sites.",
+  },
+  {
+    question: "Is it cheaper to DIY website design?",
+    answer: "DIY is cheaper upfront ($10-$50/month) but often costs more long-term. You'll spend 40-80 hours learning and troubleshooting—time better spent running your business. Professional design typically pays for itself within 6-12 months.",
+  },
+  {
+    question: "How much should I pay for website management services?",
+    answer: "Website management costs $99-$399/month depending on services. Basic maintenance (updates, backups, security) runs $99-$199/month. Comprehensive management with content updates, SEO, and analytics costs $299-$399/month.",
   },
 ];
 
 export default function FAQPage() {
+  // Generate FAQ Schema for SEO
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+
   return (
     <div className="min-h-screen">
+      {/* FAQ Schema Markup */}
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      
       <Navigation />
       <main className="pt-24 pb-16">
         {/* Hero Section */}
@@ -199,16 +210,16 @@ export default function FAQPage() {
         <section className="py-16 bg-gradient-to-b from-black to-gray-900">
           <div className="max-w-3xl mx-auto px-6 text-center">
             <h2 className="text-3xl font-bold mb-4 text-white">
-              Still Have Questions?
+              Didn't Find Your Question?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Get a free consultation and personalized quote for your project.
+              Book a free strategy call—we'll answer it personally and give you a custom quote for your project.
             </p>
             <a
               href="/contact"
               className="inline-block px-8 py-4 bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white font-semibold rounded-xl transition-all duration-200 hover:scale-105 border border-purple-500/50"
             >
-              Get Your Free Quote
+              Book Your Free Strategy Call
             </a>
           </div>
         </section>
