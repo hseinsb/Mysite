@@ -684,14 +684,15 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
           {/* Article Content */}
           <div 
             className="prose prose-lg prose-invert max-w-none
-              prose-headings:text-white prose-headings:font-bold
-              prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6
-              prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-4
-              prose-p:text-gray-300 prose-p:leading-relaxed prose-p:mb-6
-              prose-a:text-accent prose-a:no-underline hover:prose-a:underline
+              prose-headings:text-white prose-headings:font-bold prose-headings:tracking-tight
+              prose-h2:text-3xl prose-h2:mt-16 prose-h2:mb-8 prose-h2:pb-3 prose-h2:border-b prose-h2:border-gray-700/50
+              prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-5 prose-h3:text-blue-400
+              prose-p:text-gray-300 prose-p:leading-loose prose-p:mb-6 prose-p:text-lg
+              prose-a:text-accent prose-a:no-underline hover:prose-a:underline prose-a:font-medium
               prose-strong:text-white prose-strong:font-semibold
-              prose-ul:text-gray-300 prose-ul:my-6
-              prose-li:my-2"
+              prose-ul:text-gray-300 prose-ul:my-8 prose-ul:space-y-3
+              prose-li:my-0 prose-li:leading-relaxed prose-li:text-base
+              prose-li:marker:text-blue-400"
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
 
