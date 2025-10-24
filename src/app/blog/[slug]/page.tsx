@@ -662,54 +662,80 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
   }
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-gradient-to-b from-black via-gray-950 to-black">
       <Navigation />
       <main className="pt-24 pb-16">
-        <article className="max-w-4xl mx-auto px-6">
-          {/* Article Header */}
-          <header className="mb-12">
-            <div className="flex items-center gap-4 mb-4">
-              <span className="text-sm text-accent font-semibold">{post.category}</span>
-              <span className="text-sm text-gray-500">{post.readTime}</span>
-              <span className="text-sm text-gray-500">{post.publishedAt}</span>
-            </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              {post.title}
-            </h1>
-            <p className="text-xl text-gray-300">
-              {post.description}
-            </p>
-          </header>
+        {/* Article Header */}
+        <header className="max-w-4xl mx-auto px-6 mb-16">
+          <div className="flex items-center gap-4 mb-6">
+            <span className="px-3 py-1 bg-accent/10 border border-accent/30 rounded-full text-sm text-accent font-semibold">
+              {post.category}
+            </span>
+            <span className="text-sm text-gray-500">{post.readTime}</span>
+            <span className="text-sm text-gray-500">{post.publishedAt}</span>
+          </div>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 text-white leading-tight">
+            {post.title}
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-300 leading-relaxed">
+            {post.description}
+          </p>
+          <div className="mt-8 h-1 w-24 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full"></div>
+        </header>
 
-          {/* Article Content */}
+        {/* Article Content - Optimized for readability */}
+        <article className="max-w-3xl mx-auto px-6">
           <div 
-            className="prose prose-lg prose-invert max-w-none
-              prose-headings:text-white prose-headings:font-bold prose-headings:tracking-tight
-              prose-h2:text-3xl prose-h2:mt-16 prose-h2:mb-8 prose-h2:pb-3 prose-h2:border-b prose-h2:border-gray-700/50
-              prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-5 prose-h3:text-blue-400
-              prose-p:text-gray-300 prose-p:leading-loose prose-p:mb-6 prose-p:text-lg
-              prose-a:text-accent prose-a:no-underline hover:prose-a:underline prose-a:font-medium
-              prose-strong:text-white prose-strong:font-semibold
-              prose-ul:text-gray-300 prose-ul:my-8 prose-ul:space-y-3
-              prose-li:my-0 prose-li:leading-relaxed prose-li:text-base
-              prose-li:marker:text-blue-400"
+            className="blog-content
+              [&>p]:text-gray-300 [&>p]:text-lg [&>p]:leading-[1.8] [&>p]:mb-6
+              
+              [&>h2]:text-white [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:mt-16 [&>h2]:mb-8 
+              [&>h2]:pb-4 [&>h2]:border-b [&>h2]:border-gray-700/50 [&>h2]:tracking-tight
+              
+              [&>h3]:text-accent [&>h3]:text-xl [&>h3]:font-semibold [&>h3]:mt-10 [&>h3]:mb-5
+              [&>h3]:flex [&>h3]:items-center [&>h3]:gap-2
+              [&>h3:before]:content-['▸'] [&>h3:before]:text-blue-500
+              
+              [&>ul]:my-8 [&>ul]:space-y-4 [&>ul]:bg-gray-900/30 [&>ul]:border [&>ul]:border-gray-800/50 
+              [&>ul]:rounded-xl [&>ul]:p-6
+              
+              [&>ul>li]:text-gray-300 [&>ul>li]:text-base [&>ul>li]:leading-relaxed [&>ul>li]:pl-2
+              [&>ul>li]:marker:text-blue-400 [&>ul>li]:marker:text-lg
+              
+              [&>strong]:text-white [&>strong]:font-semibold [&>strong]:bg-blue-500/10 
+              [&>strong]:px-1 [&>strong]:rounded
+              
+              [&>a]:text-accent [&>a]:font-medium [&>a]:no-underline [&>a]:border-b 
+              [&>a]:border-accent/30 hover:[&>a]:border-accent [&>a]:transition-colors"
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
 
+          {/* Visual Divider */}
+          <div className="my-16 flex items-center gap-4">
+            <div className="flex-1 h-px bg-gradient-to-r from-transparent via-gray-700 to-transparent"></div>
+            <span className="text-gray-600 text-sm">•••</span>
+            <div className="flex-1 h-px bg-gradient-to-r from-transparent via-gray-700 to-transparent"></div>
+          </div>
+
           {/* CTA */}
-          <div className="mt-16 p-8 bg-gradient-to-r from-blue-900/20 to-purple-900/20 rounded-lg border border-accent/20">
-            <h3 className="text-2xl font-bold mb-4 text-white">
-              Ready to Build Your Website?
-            </h3>
-            <p className="text-gray-300 mb-6">
-              Get a free consultation and transparent pricing for your project.
-            </p>
-            <a
-              href="/contact"
-              className="inline-block px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold rounded-xl transition-all duration-200 hover:scale-105 border border-blue-500/50"
-            >
-              Get Your Free Quote
-            </a>
+          <div className="mt-16 p-8 md:p-10 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-blue-900/20 rounded-2xl border border-blue-500/20 shadow-2xl shadow-blue-500/10">
+            <div className="text-center max-w-2xl mx-auto">
+              <div className="inline-block px-4 py-2 bg-accent/10 border border-accent/30 rounded-full text-sm text-accent font-semibold mb-6">
+                Ready to Get Started?
+              </div>
+              <h3 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+                Build Your Website Today
+              </h3>
+              <p className="text-gray-300 text-lg mb-8 leading-relaxed">
+                Get a free consultation and transparent pricing for your project. No pressure, just honest advice.
+              </p>
+              <a
+                href="/contact"
+                className="inline-block px-10 py-5 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white text-lg font-semibold rounded-xl transition-all duration-200 hover:scale-105 hover:shadow-xl hover:shadow-blue-500/30 border border-blue-500/50"
+              >
+                Get Your Free Quote →
+              </a>
+            </div>
           </div>
         </article>
       </main>
