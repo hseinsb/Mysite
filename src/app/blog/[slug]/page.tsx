@@ -2,6 +2,8 @@ import { Metadata } from "next";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { notFound } from "next/navigation";
+import Link from "next/link";
+import { ChevronRight } from "lucide-react";
 
 // This would typically come from a CMS or database
 const blogPosts: Record<string, any> = {
@@ -52,13 +54,14 @@ const blogPosts: Record<string, any> = {
       </ul>
 
       <h2>💰 How Much Does a Website Cost?</h2>
-      <p>Website development costs vary widely:</p>
+      <p><a href="/blog/website-development-cost-guide" class="text-accent hover:text-accent-2 underline">Website development costs</a> vary widely:</p>
       <ul>
         <li><strong>DIY builders (Wix, Squarespace):</strong> $200-$500/year</li>
         <li><strong>Basic professional website:</strong> $1,000-$2,500</li>
         <li><strong>Custom business website:</strong> $3,000-$7,500</li>
         <li><strong>Ecommerce or complex sites:</strong> $5,000-$15,000+</li>
       </ul>
+      <p>Learn more about <a href="/services" class="text-accent hover:text-accent-2 underline">our website design packages</a> and transparent pricing.</p>
 
       <h2>💡 What If I Can't Afford a Website Right Now?</h2>
       <p>If budget is tight, start with a simple one-page website that includes:</p>
@@ -96,6 +99,7 @@ const blogPosts: Record<string, any> = {
       <h3>1. Lost Customer Acquisition ($10,000-$50,000+ annually)</h3>
       <p>When potential customers search for services like yours, they find your competitors instead. Studies show that 81% of shoppers conduct online research before making a purchase. Without a website, you're invisible to this massive audience.</p>
       <p><strong>Real example:</strong> A local plumber without a website loses an estimated 5-10 service calls per month to competitors with strong online presence. At $200-500 per job, that's $12,000-$60,000 in lost annual revenue.</p>
+      <p>Not sure if you need a website? Read our guide: <a href="/blog/do-i-need-website-for-business" class="text-accent hover:text-accent-2 underline">Do I Need a Website for My Business?</a></p>
 
       <h3>2. Reduced Credibility and Trust</h3>
       <p>84% of consumers believe a business with a website is more credible than one with only social media. Without a professional website, you're fighting an uphill battle to earn trust—and trust directly impacts conversion rates.</p>
@@ -142,6 +146,7 @@ const blogPosts: Record<string, any> = {
       <h2>What's the Alternative Cost?</h2>
       <p>A professional business website costs $2,000-$5,000 upfront, with $200-500 annual maintenance. Compare that to the $10,000-$50,000+ you're losing annually without one.</p>
       <p>The question isn't whether you can afford a website—it's whether you can afford NOT to have one.</p>
+      <p>Check out our <a href="/services" class="text-accent hover:text-accent-2 underline">website design packages and pricing</a> to see what fits your budget.</p>
 
       <h2>Take Action Today</h2>
       <p>Stop leaving money on the table. <a href="/contact" class="text-accent hover:underline">Get a free consultation</a> and discover how a professional website can transform your business growth.</p>
@@ -194,6 +199,7 @@ const blogPosts: Record<string, any> = {
         <li>Security features and SSL</li>
       </ul>
       <p><strong>Best for:</strong> Retail businesses, online stores, product-based businesses.</p>
+      <p>Explore our <a href="/services" class="text-accent hover:text-accent-2 underline">ecommerce development packages</a> for detailed pricing.</p>
 
       <h3>Custom Web Application: $15,000 - $50,000+</h3>
       <p><strong>What you get:</strong></p>
@@ -243,6 +249,7 @@ const blogPosts: Record<string, any> = {
         <li><strong>Maintenance and updates:</strong> $50-500/month</li>
         <li><strong>Content updates:</strong> $100-500/month if outsourced</li>
       </ul>
+      <p>Check out our <a href="/services" class="text-accent hover:text-accent-2 underline">website maintenance packages</a> for affordable ongoing support.</p>
 
       <h2>Red Flags: When a Quote Is Too Good to Be True</h2>
       <p>Be wary of:</p>
@@ -331,6 +338,7 @@ const blogPosts: Record<string, any> = {
         <li>Your brand identity is important to your business</li>
         <li>You're in a competitive industry</li>
       </ul>
+      <p>Learn more about <a href="/blog/website-development-cost-guide" class="text-accent hover:text-accent-2 underline">custom development costs</a> and what to expect.</p>
 
       <h2>The Hybrid Approach: AI-Assisted Custom Development</h2>
       <p>The best of both worlds? Developers who use AI tools to speed up development while still delivering custom solutions. This approach offers:</p>
@@ -410,6 +418,7 @@ const blogPosts: Record<string, any> = {
 
       <h3>3. Platform Migration</h3>
       <p>Staying on the same platform (e.g., WordPress to WordPress) is cheaper than migrating platforms (e.g., Wix to custom Next.js), which can add $2,000-5,000.</p>
+      <p>Wondering about <a href="/blog/ai-website-maker-vs-custom-development" class="text-accent hover:text-accent-2 underline">different platform options</a>? Read our comparison guide.</p>
 
       <h3>4. Custom Features</h3>
       <p>Each custom feature adds cost:</p>
@@ -496,6 +505,7 @@ const blogPosts: Record<string, any> = {
         <li><strong>Budget-friendly:</strong> $500-2,000 (freelancer or basic custom site)</li>
         <li><strong>Value investment:</strong> $2,000-5,000 (professional custom development)</li>
       </ul>
+      <p>For a complete breakdown, check out our <a href="/blog/website-development-cost-guide" class="text-accent hover:text-accent-2 underline">website development cost guide</a>.</p>
 
       <h2>Ultra-Budget Options: $0-500</h2>
 
@@ -518,6 +528,7 @@ const blogPosts: Record<string, any> = {
         <li>Slower performance</li>
       </ul>
       <p><strong>Best for:</strong> Testing a business idea, temporary sites, or very simple needs</p>
+      <p>Compare these with <a href="/blog/ai-website-maker-vs-custom-development" class="text-accent hover:text-accent-2 underline">AI website makers and custom development</a>.</p>
 
       <h3>WordPress.com Free/Basic</h3>
       <p><strong>Cost:</strong> $0-96/year</p>
@@ -685,6 +696,21 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
     <div className="min-h-screen bg-gradient-to-b from-black via-gray-950 to-black">
       <Navigation />
       <main className="pt-24 pb-16">
+        {/* Breadcrumb Navigation */}
+        <div className="max-w-4xl mx-auto px-6 mb-8">
+          <nav className="flex items-center text-sm text-gray-400">
+            <Link href="/" className="hover:text-white transition-colors">
+              Home
+            </Link>
+            <ChevronRight className="w-4 h-4 mx-2" />
+            <Link href="/blog" className="hover:text-white transition-colors">
+              Blog
+            </Link>
+            <ChevronRight className="w-4 h-4 mx-2" />
+            <span className="text-white">{post.title}</span>
+          </nav>
+        </div>
+
         {/* Article Header */}
         <header className="max-w-4xl mx-auto px-6 mb-16">
           <div className="flex items-center gap-4 mb-6">
