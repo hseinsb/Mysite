@@ -9,26 +9,40 @@ const blogPosts: Record<string, any> = {
     title: "Do I Need a Website for My Business in 2025?",
     description: "Discover why having a website is essential for business growth, credibility, and customer reach—even for small local businesses.",
     content: `
-      <p>If you're asking "do I need a website for my business," the short answer is: <strong>yes, absolutely</strong>. In 2025, a website isn't just a nice-to-have—it's essential for credibility, customer reach, and business growth.</p>
-
-      <h2>Why Every Business Needs a Website</h2>
+      <p>If you're asking "do I need a website for my business," the short answer is: <strong>yes, absolutely</strong>.</p>
       
-      <h3>1. Customers Expect It</h3>
-      <p>97% of consumers search online before making a purchase decision. If your business doesn't have a website, you're invisible to most potential customers. Even if they hear about you through word-of-mouth, they'll search for your website to verify you're legitimate.</p>
+      <p>In 2025, a website isn't just a nice-to-have—it's essential for credibility, customer reach, and business growth.</p>
 
-      <h3>2. 24/7 Marketing That Never Sleeps</h3>
-      <p>Your website works around the clock, answering questions, showcasing products, and generating leads while you sleep. It's the most cost-effective marketing tool you'll ever invest in.</p>
+      <h2>💡 Why Every Business Needs a Website</h2>
+      
+      <h3>✅ 1. Customers Expect It</h3>
+      <p><strong>97% of consumers search online before making a purchase decision.</strong></p>
+      
+      <p>If your business doesn't have a website, you're invisible to most potential customers.</p>
+      
+      <p>Even if they hear about you through word-of-mouth, they'll search for your website to verify you're legitimate.</p>
 
-      <h3>3. Credibility and Trust</h3>
-      <p>A professional website signals that you're a real, established business. Without one, potential customers may question your legitimacy or assume you're outdated.</p>
+      <h3>🌙 2. 24/7 Marketing That Never Sleeps</h3>
+      <p>Your website works around the clock, answering questions, showcasing products, and generating leads while you sleep.</p>
+      
+      <p>It's the most cost-effective marketing tool you'll ever invest in.</p>
 
-      <h3>4. Control Your Brand Story</h3>
-      <p>Social media is great, but you don't own those platforms. A website gives you complete control over your brand message, design, and customer experience.</p>
+      <h3>🔒 3. Credibility and Trust</h3>
+      <p>A professional website signals that you're a real, established business.</p>
+      
+      <p>Without one, potential customers may question your legitimacy or assume you're outdated.</p>
 
-      <h3>5. Compete with Larger Businesses</h3>
-      <p>A well-designed website levels the playing field. Small businesses can compete with larger competitors by showcasing expertise, customer testimonials, and unique value propositions.</p>
+      <h3>🎨 4. Control Your Brand Story</h3>
+      <p>Social media is great, but you don't own those platforms.</p>
+      
+      <p>A website gives you complete control over your brand message, design, and customer experience.</p>
 
-      <h2>What About Social Media? Isn't That Enough?</h2>
+      <h3>⚖️ 5. Compete with Larger Businesses</h3>
+      <p>A well-designed website levels the playing field.</p>
+      
+      <p>Small businesses can compete with larger competitors by showcasing expertise, customer testimonials, and unique value propositions.</p>
+
+      <h2>📱 What About Social Media? Isn't That Enough?</h2>
       <p>While social media is important, it's not a replacement for a website. Here's why:</p>
       <ul>
         <li>You don't own your social media presence—platforms can change algorithms or shut down</li>
@@ -37,7 +51,7 @@ const blogPosts: Record<string, any> = {
         <li>Professional clients often expect a website, not just an Instagram page</li>
       </ul>
 
-      <h2>How Much Does a Website Cost?</h2>
+      <h2>💰 How Much Does a Website Cost?</h2>
       <p>Website development costs vary widely:</p>
       <ul>
         <li><strong>DIY builders (Wix, Squarespace):</strong> $200-$500/year</li>
@@ -46,7 +60,7 @@ const blogPosts: Record<string, any> = {
         <li><strong>Ecommerce or complex sites:</strong> $5,000-$15,000+</li>
       </ul>
 
-      <h2>What If I Can't Afford a Website Right Now?</h2>
+      <h2>💡 What If I Can't Afford a Website Right Now?</h2>
       <p>If budget is tight, start with a simple one-page website that includes:</p>
       <ul>
         <li>Your business name and what you do</li>
@@ -54,12 +68,16 @@ const blogPosts: Record<string, any> = {
         <li>A few customer testimonials</li>
         <li>Clear call-to-action</li>
       </ul>
-      <p>Even a basic site is better than nothing. You can always expand later as your business grows.</p>
+      <p>Even a basic site is better than nothing.</p>
+      
+      <p>You can always expand later as your business grows.</p>
 
-      <h2>The Bottom Line</h2>
-      <p>If you're serious about growing your business, a website isn't optional—it's essential. The question isn't "do I need a website," but "how quickly can I get one up and running?"</p>
+      <h2>🎯 The Bottom Line</h2>
+      <p>If you're serious about growing your business, a website isn't optional—it's essential.</p>
+      
+      <p>The question isn't "do I need a website," but <strong>"how quickly can I get one up and running?"</strong></p>
 
-      <p>Ready to get started? <a href="/contact" class="text-accent hover:underline">Get a free quote</a> and let's build a website that works for your business.</p>
+      <p>Ready to get started? <a href="/contact">Get a free quote</a> and let's build a website that works for your business.</p>
     `,
     publishedAt: "2025-01-15",
     category: "Business Strategy",
@@ -687,26 +705,31 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
         <article className="max-w-3xl mx-auto px-6">
           <div 
             className="blog-content
-              [&>p]:text-gray-300 [&>p]:text-lg [&>p]:leading-[1.8] [&>p]:mb-6
+              [&>p]:text-gray-300 [&>p]:text-lg [&>p]:leading-[1.9] [&>p]:mb-8 [&>p]:max-w-[75ch]
               
-              [&>h2]:text-white [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:mt-16 [&>h2]:mb-8 
-              [&>h2]:pb-4 [&>h2]:border-b [&>h2]:border-gray-700/50 [&>h2]:tracking-tight
+              [&>h2]:text-white [&>h2]:text-4xl [&>h2]:font-bold [&>h2]:mt-24 [&>h2]:mb-12 
+              [&>h2]:pb-6 [&>h2]:border-b-2 [&>h2]:border-gradient-to-r [&>h2]:border-blue-500/30 
+              [&>h2]:tracking-tight [&>h2]:scroll-mt-24
               
-              [&>h3]:text-accent [&>h3]:text-xl [&>h3]:font-semibold [&>h3]:mt-10 [&>h3]:mb-5
-              [&>h3]:flex [&>h3]:items-center [&>h3]:gap-2
-              [&>h3:before]:content-['▸'] [&>h3:before]:text-blue-500
+              [&>h3]:text-white [&>h3]:text-2xl [&>h3]:font-bold [&>h3]:mt-16 [&>h3]:mb-8
+              [&>h3]:pb-4 [&>h3]:border-b [&>h3]:border-gray-800/50 [&>h3]:scroll-mt-24
+              [&>h3]:bg-gradient-to-r [&>h3]:from-blue-500/5 [&>h3]:to-transparent 
+              [&>h3]:pl-6 [&>h3]:py-4 [&>h3]:rounded-lg [&>h3]:-ml-6
               
-              [&>ul]:my-8 [&>ul]:space-y-4 [&>ul]:bg-gray-900/30 [&>ul]:border [&>ul]:border-gray-800/50 
-              [&>ul]:rounded-xl [&>ul]:p-6
+              [&>ul]:my-10 [&>ul]:space-y-5 [&>ul]:bg-gray-900/40 [&>ul]:border [&>ul]:border-gray-800/50 
+              [&>ul]:rounded-2xl [&>ul]:p-8 [&>ul]:backdrop-blur-sm
               
-              [&>ul>li]:text-gray-300 [&>ul>li]:text-base [&>ul>li]:leading-relaxed [&>ul>li]:pl-2
-              [&>ul>li]:marker:text-blue-400 [&>ul>li]:marker:text-lg
+              [&>ul>li]:text-gray-300 [&>ul>li]:text-lg [&>ul>li]:leading-[1.8] [&>ul>li]:pl-3
+              [&>ul>li]:marker:text-blue-400 [&>ul>li]:marker:text-xl [&>ul>li]:marker:font-bold
               
-              [&>strong]:text-white [&>strong]:font-semibold [&>strong]:bg-blue-500/10 
-              [&>strong]:px-1 [&>strong]:rounded
+              [&>strong]:text-white [&>strong]:font-bold [&>strong]:bg-gradient-to-r 
+              [&>strong]:from-blue-500/20 [&>strong]:to-purple-500/20
+              [&>strong]:px-2 [&>strong]:py-0.5 [&>strong]:rounded [&>strong]:border 
+              [&>strong]:border-blue-500/30
               
-              [&>a]:text-accent [&>a]:font-medium [&>a]:no-underline [&>a]:border-b 
-              [&>a]:border-accent/30 hover:[&>a]:border-accent [&>a]:transition-colors"
+              [&>a]:text-accent [&>a]:font-semibold [&>a]:no-underline [&>a]:border-b-2
+              [&>a]:border-accent/40 hover:[&>a]:border-accent [&>a]:transition-all
+              hover:[&>a]:text-blue-400"
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
 
