@@ -1,7 +1,6 @@
 import { Metadata } from "next";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
-import { ServicesSnapshot } from "@/components/ServicesSnapshot";
 import { IntakeForm } from "@/components/IntakeForm";
 
 export const metadata: Metadata = {
@@ -53,9 +52,6 @@ export default function ServicesPage() {
             </p>
           </div>
         </section>
-
-        {/* Services Overview */}
-        <ServicesSnapshot />
 
         {/* Pricing Details Section */}
         <section className="py-16 bg-black">
